@@ -50,7 +50,6 @@ func (r *repo) GetProductsDetail() []models.Product {
 		return []models.Product{}
 	}
 
-	// Enrich products with category and seller information
 	for i := range products {
 		if category, exists := r.categories[products[i].CategoryID]; exists {
 			products[i].Category = category
