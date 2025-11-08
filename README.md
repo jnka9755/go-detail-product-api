@@ -29,7 +29,7 @@ Instalación y ejecución (máquina nueva)
 1. Clonar el repositorio
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/jnka9755/go-detail-product-api
 cd go-detail-product-api
 ```
 
