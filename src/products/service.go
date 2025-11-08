@@ -2,11 +2,13 @@ package products
 
 import (
 	"log"
+
+	"github.com/jnka9755/go-detail-product-api/src/products/models"
 )
 
 type Service interface {
-	GetProductsDetail() []string
-	GetProductsDetailById(id int) (string, error)
+	GetProductsDetail() []models.Product
+	GetProductsDetailById(id string) (models.Product, error)
 }
 
 type serv struct {
@@ -21,7 +23,7 @@ func NewService(log *log.Logger, repo Repository) Service {
 	}
 }
 
-func (s *serv) GetProductsDetail() []string {
+func (s *serv) GetProductsDetail() []models.Product {
 
 	s.log.Println("getProductsDetail Service")
 
@@ -30,7 +32,7 @@ func (s *serv) GetProductsDetail() []string {
 	return products
 }
 
-func (s *serv) GetProductsDetailById(id int) (string, error) {
+func (s *serv) GetProductsDetailById(id string) (models.Product, error) {
 
 	s.log.Println("getProductsDetailById Service")
 

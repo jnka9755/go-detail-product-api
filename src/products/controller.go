@@ -2,11 +2,12 @@ package products
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
-	"strconv"
 
 	"github.com/gorilla/mux"
+	handleerrors "github.com/jnka9755/go-detail-product-api/src/products/handle-errors"
 )
 
 type (
@@ -44,19 +45,16 @@ func makeGetProductsDetailByIdEndpoint(service Service) Controller {
 
 		path := mux.Vars(r)
 		id := path["id"]
-		idInt, err := strconv.Atoi(id)
+
+		product, err := service.GetProductsDetailById(id)
 
 		if err != nil {
-			w.WriteHeader(http.StatusBadRequest)
-			json.NewEncoder(w).Encode(ErrorResponse{Error: "invalid id"})
-			return
-		}
-
-		product, err := service.GetProductsDetailById(idInt)
-
-		if err != nil {
-			w.WriteHeader(http.StatusBadRequest)
-			json.NewEncoder(w).Encode(ErrorResponse{Error: "Erorr getting product"})
+			if errors.Is(err, handleerrors.ErrNotFound) {
+				w.WriteHeader(http.StatusNotFound)
+			} else {
+				w.WriteHeader(http.StatusInternalServerError)
+			}
+			json.NewEncoder(w).Encode(ErrorResponse{Error: err.Error()})
 			return
 		}
 

@@ -1,6 +1,24 @@
-package products
+package models
 
 import "time"
+
+type Product struct {
+	ID                string      `json:"id"`
+	Title             string      `json:"title"`
+	Price             float64     `json:"price"`
+	CurrencyID        string      `json:"currency_id"`
+	Condition         string      `json:"condition"`
+	AvailableQuantity int         `json:"available_quantity"`
+	SoldQuantity      int         `json:"sold_quantity"`
+	Pictures          []Picture   `json:"pictures"`
+	Attributes        []Attribute `json:"attributes"`
+	CategoryID        string      `json:"category_id"`
+	Category          Category    `json:"category"`
+	SellerID          string      `json:"seller_id"`
+	Seller            Seller      `json:"seller"`
+	Shipping          Shipping    `json:"shipping"`
+	CreatedAt         time.Time   `json:"created_at"`
+}
 
 type Picture struct {
 	ID  string `json:"id"`
@@ -26,33 +44,8 @@ type Seller struct {
 	Location   string  `json:"location"`
 }
 
-type Product struct {
-	ID                string      `json:"id"`
-	Title             string      `json:"title"`
-	Price             float64     `json:"price"`
-	CurrencyID        string      `json:"currency_id"`
-	Condition         string      `json:"condition"`
-	AvailableQuantity int         `json:"available_quantity"`
-	SoldQuantity      int         `json:"sold_quantity"`
-	Pictures          []Picture   `json:"pictures"`
-	Attributes        []Attribute `json:"attributes"`
-	CategoryID        string      `json:"category_id"`
-	SellerID          string      `json:"seller_id"`
-	Shipping          Shipping    `json:"shipping"`
-	CreatedAt         time.Time   `json:"created_at"`
-}
-
 type Category struct {
 	ID       string  `json:"id"`
 	Name     string  `json:"name"`
 	ParentID *string `json:"parent_id,omitempty"`
-}
-
-type Review struct {
-	ID        string    `json:"id"`
-	ProductID string    `json:"product_id"`
-	Author    string    `json:"author"`
-	Rating    int       `json:"rating"`
-	Comment   string    `json:"comment"`
-	CreatedAt time.Time `json:"created_at"`
 }
