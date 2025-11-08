@@ -8,15 +8,15 @@ Este repositorio expone dos endpoints HTTP:
 - GET /product/{id} -> devuelve un producto por su id (por ejemplo `MLA1`)
 
 Características principales
-- Lee datos desde los ficheros JSON en `./data/` (products, categories, sellers, reviews).
+- Lee datos desde los ficheros JSON en `./data/` (products, categories, sellers).
 - Al inicializar el repositorio carga categorías y vendedores en memoria y enriquece los productos con esas estructuras.
 - Usa un error sentinel `ErrNotFound` para distinguir "producto no encontrado" de otros fallos.
 
 Contenido del repo
 
 - `main.go` - arranca el servidor HTTP en `localhost:8080` y registra las rutas.
-- `Makefile` - tareas comunes: build, run, test, fmt, vet, tidy, deps, lint, clean.
-- `data/` - JSONs de ejemplo (products.json, categories.json, sellers.json, reviews.json).
+- `Makefile` - tareas comunes: run, test, tidy, deps.
+- `data/` - JSONs de ejemplo (products.json, categories.json, sellers.json).
 - `src/products/` - implementación: controller, service, repository y modelos.
 
 Requisitos
@@ -88,13 +88,3 @@ Depuración rápida
 
 - Para ver los logs del servidor ejecuta `make run` y observa la salida en la consola.
 - Si quieres ver fallos de parsing de JSON, revisa los mensajes que se loguean durante `NewRepository` y la carga de ficheros.
-
-Extensiones sugeridas
-
-- Hacer que las funciones de carga (`loadCategories`, `loadSellers`) retornen errores y exponerlos para retornar 500 desde el inicio si fallan.
-- Añadir tests unitarios para el repositorio (cargar ficheros de prueba) y para el servicio.
-- Añadir paginación y filtros a `GET /products`.
-
-Contacto
-
-Si necesitas ayuda adicional o quieres que ejecute la aplicación y verifique la configuración en este entorno, dime y lo hago.
