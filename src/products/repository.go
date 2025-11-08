@@ -18,13 +18,15 @@ type repo struct {
 	log        *log.Logger
 	categories map[string]models.Category
 	sellers    map[string]models.Seller
+	dataPath   string
 }
 
-func NewRepository(log *log.Logger) Repository {
+func NewRepository(log *log.Logger, dataPath string) Repository {
 	r := &repo{
 		log:        log,
 		categories: make(map[string]models.Category),
 		sellers:    make(map[string]models.Seller),
+		dataPath:   dataPath,
 	}
 	r.loadCategories()
 	r.loadSellers()
@@ -34,7 +36,7 @@ func NewRepository(log *log.Logger) Repository {
 func (r *repo) GetProductsDetail() []models.Product {
 	r.log.Println("getProductsDetail Repository")
 
-	file, err := os.Open("data/products.json")
+	file, err := os.Open(r.dataPath + "/products.json")
 	if err != nil {
 		r.log.Printf("Error opening products file: %v", err)
 		return []models.Product{}
@@ -50,11 +52,9 @@ func (r *repo) GetProductsDetail() []models.Product {
 
 	// Enrich products with category and seller information
 	for i := range products {
-
 		if category, exists := r.categories[products[i].CategoryID]; exists {
 			products[i].Category = category
 		}
-
 		if seller, exists := r.sellers[products[i].SellerID]; exists {
 			products[i].Seller = seller
 		}
@@ -78,7 +78,7 @@ func (r *repo) GetProductsDetailById(id string) (models.Product, error) {
 }
 
 func (r *repo) loadCategories() {
-	file, err := os.Open("data/categories.json")
+	file, err := os.Open(r.dataPath + "/categories.json")
 	if err != nil {
 		r.log.Printf("Error opening categories file: %v", err)
 		return
@@ -98,7 +98,7 @@ func (r *repo) loadCategories() {
 }
 
 func (r *repo) loadSellers() {
-	file, err := os.Open("data/sellers.json")
+	file, err := os.Open(r.dataPath + "/sellers.json")
 	if err != nil {
 		r.log.Printf("Error opening sellers file: %v", err)
 		return

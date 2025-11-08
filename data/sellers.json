@@ -1,4 +1,8 @@
 [
   {"id": "s1", "name": "StoreTech", "reputation": 4.7, "location": "Buenos Aires"},
-  {"id": "s2", "name": "GamerHouse", "reputation": 4.5, "location": "Córdoba"}
+  {"id": "s2", "name": "GamerHouse", "reputation": 4.5, "location": "Córdoba"},
+  {"id": "s3", "name": "Gaming Paradise", "reputation": 4.9, "location": "Ciudad de México"},
+  {"id": "s4", "name": "Office Solutions", "reputation": 4.6, "location": "Santiago"},
+  {"id": "s5", "name": "Audio Pro", "reputation": 4.7, "location": "Lima"},
+  {"id": "s6", "name": "Deco Home", "reputation": 4.4, "location": "Medellín"}
 ]

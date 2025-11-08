@@ -13,9 +13,10 @@
     ],
     "attributes": [
       {"id": "BRAND", "name": "Marca", "value": "X-Prime"},
-      {"id": "MODEL", "name": "Modelo", "value": "XPR-2025"}
+      {"id": "MODEL", "name": "Modelo", "value": "XPR-2025"},
+      {"id": "COLOR", "name": "Color", "value": "Negro"}
     ],
-    "category_id": "c1",
+    "category_id": "c3",
     "seller_id": "s1",
     "shipping": {"mode": "standard", "free_shipping": true, "store_pick_up": false},
     "created_at": "2025-10-01T12:00:00Z"
@@ -33,11 +34,98 @@
     ],
     "attributes": [
       {"id": "BRAND", "name": "Marca", "value": "Qwerty"},
-      {"id": "SWITCH", "name": "Switch", "value": "Brown"}
+      {"id": "SWITCH", "name": "Switch", "value": "Brown"},
+      {"id": "LAYOUT", "name": "Distribución", "value": "Español"}
     ],
-    "category_id": "c1",
+    "category_id": "c3",
     "seller_id": "s2",
     "shipping": {"mode": "express", "free_shipping": false, "store_pick_up": true},
     "created_at": "2025-09-20T09:30:00Z"
+  },
+  {
+    "id": "MLA3",
+    "title": "Silla Gamer Ergonómica Premium",
+    "price": 199990,
+    "currency_id": "ARS",
+    "condition": "new",
+    "available_quantity": 5,
+    "sold_quantity": 25,
+    "pictures": [
+      {"id": "1", "url": "https://example.com/silla1.jpg"},
+      {"id": "2", "url": "https://example.com/silla2.jpg"}
+    ],
+    "attributes": [
+      {"id": "BRAND", "name": "Marca", "value": "ComfortPro"},
+      {"id": "MATERIAL", "name": "Material", "value": "Cuero sintético"},
+      {"id": "MAX_WEIGHT", "name": "Peso máximo", "value": "150kg"}
+    ],
+    "category_id": "c6",
+    "seller_id": "s4",
+    "shipping": {"mode": "special", "free_shipping": true, "store_pick_up": false},
+    "created_at": "2025-10-05T15:30:00Z"
+  },
+  {
+    "id": "MLA4",
+    "title": "Tarjeta Gráfica RTX 4070",
+    "price": 899990,
+    "currency_id": "ARS",
+    "condition": "new",
+    "available_quantity": 3,
+    "sold_quantity": 15,
+    "pictures": [
+      {"id": "1", "url": "https://example.com/gpu1.jpg"}
+    ],
+    "attributes": [
+      {"id": "BRAND", "name": "Marca", "value": "NVIDIA"},
+      {"id": "MEMORY", "name": "Memoria", "value": "12GB GDDR6X"},
+      {"id": "CORES", "name": "Núcleos CUDA", "value": "7680"}
+    ],
+    "category_id": "c4",
+    "seller_id": "s3",
+    "shipping": {"mode": "premium", "free_shipping": true, "store_pick_up": true},
+    "created_at": "2025-10-10T10:00:00Z"
+  },
+  {
+    "id": "MLA5",
+    "title": "Auriculares Bluetooth Pro",
+    "price": 129990,
+    "currency_id": "ARS",
+    "condition": "new",
+    "available_quantity": 15,
+    "sold_quantity": 42,
+    "pictures": [
+      {"id": "1", "url": "https://example.com/headphones1.jpg"},
+      {"id": "2", "url": "https://example.com/headphones2.jpg"}
+    ],
+    "attributes": [
+      {"id": "BRAND", "name": "Marca", "value": "SoundMaster"},
+      {"id": "BATTERY", "name": "Batería", "value": "30 horas"},
+      {"id": "NOISE_CANCEL", "name": "Cancelación de ruido", "value": "Activa"}
+    ],
+    "category_id": "c5",
+    "seller_id": "s5",
+    "shipping": {"mode": "standard", "free_shipping": true, "store_pick_up": true},
+    "created_at": "2025-10-15T14:20:00Z"
+  },
+  {
+    "id": "MLA6",
+    "title": "Lámpara de Escritorio LED",
+    "price": 29990,
+    "currency_id": "ARS",
+    "condition": "new",
+    "available_quantity": 30,
+    "sold_quantity": 89,
+    "pictures": [
+      {"id": "1", "url": "https://example.com/lamp1.jpg"}
+    ],
+    "attributes": [
+      {"id": "BRAND", "name": "Marca", "value": "LightPro"},
+      {"id": "COLOR_TEMP", "name": "Temperatura de color", "value": "3000K-6500K"},
+      {"id": "POWER", "name": "Potencia", "value": "10W"}
+    ],
+    "category_id": "c7",
+    "seller_id": "s6",
+    "shipping": {"mode": "standard", "free_shipping": false, "store_pick_up": true},
+    "created_at": "2025-10-20T09:15:00Z"
   }
 ]

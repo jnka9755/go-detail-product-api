@@ -1,0 +1,14 @@
+[
+  {
+    "id": "SELL1",
+    "name": "Test Seller 1",
+    "reputation": 4.5,
+    "location": "Test Location 1"
+  },
+  {
+    "id": "SELL2",
+    "name": "Test Seller 2",
+    "reputation": 5.0,
+    "location": "Test Location 2"
+  }
+]

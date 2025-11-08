@@ -15,7 +15,7 @@ func main() {
 	router := mux.NewRouter()
 	logger := log.New(os.Stdout, "[server] ", log.LstdFlags|log.Lshortfile)
 
-	productsRepo := products.NewRepository(logger)
+	productsRepo := products.NewRepository(logger, "data/")
 	productsServ := products.NewService(logger, productsRepo)
 	productController := products.MakeEndpoints(productsServ)
 

@@ -1,5 +1,152 @@
 [
-  {"id": "c0", "name": "Electrónica"},
-  {"id": "c1", "name": "Periféricos", "parent_id": "c0"},
-  {"id": "c2", "name": "Auriculares", "parent_id": "c0"}
+  {
+    "id": "c1",
+    "name": "Tecnología",
+    "parent_id": null
+  },
+  {
+    "id": "c2",
+    "name": "Hogar y Muebles",
+    "parent_id": null
+  },
+  {
+    "id": "c3",
+    "name": "Deportes y Fitness",
+    "parent_id": null
+  },
+  {
+    "id": "c4",
+    "name": "Electrodomésticos",
+    "parent_id": null
+  },
+  {
+    "id": "c5",
+    "name": "Periféricos de PC",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c6",
+    "name": "Componentes de PC",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c7",
+    "name": "Audio y Video",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c8",
+    "name": "Laptops y Tablets",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c9",
+    "name": "Consolas y Videojuegos",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c10",
+    "name": "Redes y Conectividad",
+    "parent_id": "c1"
+  },
+  {
+    "id": "c11",
+    "name": "Muebles de Oficina",
+    "parent_id": "c2"
+  },
+  {
+    "id": "c12",
+    "name": "Decoración",
+    "parent_id": "c2"
+  },
+  {
+    "id": "c13",
+    "name": "Iluminación",
+    "parent_id": "c2"
+  },
+  {
+    "id": "c14",
+    "name": "Jardín y Exterior",
+    "parent_id": "c2"
+  },
+  {
+    "id": "c15",
+    "name": "Organización",
+    "parent_id": "c2"
+  },
+  {
+    "id": "c16",
+    "name": "Máquinas de Ejercicio",
+    "parent_id": "c3"
+  },
+  {
+    "id": "c17",
+    "name": "Bicicletas y Ciclismo",
+    "parent_id": "c3"
+  },
+  {
+    "id": "c18",
+    "name": "Camping y Outdoor",
+    "parent_id": "c3"
+  },
+  {
+    "id": "c19",
+    "name": "Ropa Deportiva",
+    "parent_id": "c3"
+  },
+  {
+    "id": "c20",
+    "name": "Suplementos",
+    "parent_id": "c3"
+  },
+  {
+    "id": "c21",
+    "name": "Línea Blanca",
+    "parent_id": "c4"
+  },
+  {
+    "id": "c22",
+    "name": "Climatización",
+    "parent_id": "c4"
+  },
+  {
+    "id": "c23",
+    "name": "Pequeños Electrodomésticos",
+    "parent_id": "c4"
+  },
+  {
+    "id": "c24",
+    "name": "Gaming",
+    "parent_id": "c5"
+  },
+  {
+    "id": "c25",
+    "name": "Profesional",
+    "parent_id": "c5"
+  },
+  {
+    "id": "c26",
+    "name": "Procesadores",
+    "parent_id": "c6"
+  },
+  {
+    "id": "c27",
+    "name": "Tarjetas Gráficas",
+    "parent_id": "c6"
+  },
+  {
+    "id": "c28",
+    "name": "Almacenamiento",
+    "parent_id": "c6"
+  },
+  {
+    "id": "c29",
+    "name": "Memorias RAM",
+    "parent_id": "c6"
+  },
+  {
+    "id": "c30",
+    "name": "Placas Base",
+    "parent_id": "c6"
+  }
 ]

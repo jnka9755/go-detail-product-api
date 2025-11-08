@@ -1,0 +1,12 @@
+[
+  {
+    "id": "CAT1",
+    "name": "Test Category 1",
+    "parent_id": null
+  },
+  {
+    "id": "CAT2",
+    "name": "Test Category 2",
+    "parent_id": "CAT1"
+  }
+]
