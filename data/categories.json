@@ -1,0 +1,5 @@
+[
+  {"id": "c0", "name": "Electrónica"},
+  {"id": "c1", "name": "Periféricos", "parent_id": "c0"},
+  {"id": "c2", "name": "Auriculares", "parent_id": "c0"}
+]

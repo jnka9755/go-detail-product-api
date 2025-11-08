@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -12,10 +13,14 @@ import (
 func main() {
 
 	router := mux.NewRouter()
+	logger := log.New(os.Stdout, "[server] ", log.LstdFlags|log.Lshortfile)
 
-	userController := products.MakeEndpoints()
+	productsRepo := products.NewRepository(logger)
+	productsServ := products.NewService(logger, productsRepo)
+	productController := products.MakeEndpoints(productsServ)
 
-	router.HandleFunc("/products", userController.GetProductsDetail).Methods("GET")
+	router.HandleFunc("/products", productController.GetProductsDetail).Methods("GET")
+	router.HandleFunc("/product/{id}", productController.GetProductsDetailById).Methods("GET")
 
 	server := &http.Server{
 		Handler:      router,

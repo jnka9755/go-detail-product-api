@@ -1,0 +1,4 @@
+[
+  {"id": "s1", "name": "StoreTech", "reputation": 4.7, "location": "Buenos Aires"},
+  {"id": "s2", "name": "GamerHouse", "reputation": 4.5, "location": "Córdoba"}
+]
