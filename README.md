@@ -60,7 +60,6 @@ El servidor escuchará en `localhost:8080`.
 Comandos útiles (Makefile)
 
 - `make run` -> ejecuta `go run main.go`
-- `make run-dev` -> ejecuta con detector de race `go run -race main.go`
 - `make test` -> ejecuta `go test ./...`
 - `make tidy` -> `go mod tidy`
 - `make deps` -> `go mod download`
